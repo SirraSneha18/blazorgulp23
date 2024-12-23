@@ -55,7 +55,7 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
           app_location: "/"  # Path to the root of your app
-          output_location: "dist"  # Replace with the actual build output folder from your gulpfile.js
+          output_location: "wwwroot"  # Replace with the actual build output folder from your gulpfile.js
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
