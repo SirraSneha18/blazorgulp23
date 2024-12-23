@@ -1,0 +1,70 @@
+name: Azure Static Web Apps CI/CD
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+    branches:
+      - main
+
+jobs:
+  build_and_deploy_job:
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
+    runs-on: ubuntu-latest
+    name: Build and Deploy Job
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+          lfs: false
+
+      # Set up Node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      # Clean npm cache and install dependencies to ensure platform-specific binaries are installed
+      - name: Clean npm cache and install dependencies
+        run: |
+          rm -rf node_modules
+          npm ci  # Ensures fresh installation of dependencies
+
+      # Install gulp globally
+      - name: Install gulp globally
+        run: npm install -g gulp-cli
+
+      # Ensure gulp is available via npx and check the installed version
+      - name: Check Gulp version
+        run: |
+          npx gulp --version  # Ensure npx is using the local gulp version
+
+      # Run the gulp build process
+      - name: Run gulp build
+        run: |
+          npx gulp default  # Ensure gulp is invoked with 'npx' to use the locally installed version
+
+      # Deploy to Azure Static Web Apps
+      - name: Deploy to Azure Static Web Apps
+        id: builddeploy
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_RED_WATER_081F97E0F }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          action: "upload"
+          app_location: "/"  # Path to the root of your app
+          output_location: "wwwroot"  # Replace with the actual build output folder from your gulpfile.js
+
+  close_pull_request_job:
+    if: github.event_name == 'pull_request' && github.event.action == 'closed'
+    runs-on: ubuntu-latest
+    name: Close Pull Request Job
+    steps:
+      - name: Close Pull Request
+        id: closepullrequest
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_RED_WATER_081F97E0F }}
+          action: "close"
