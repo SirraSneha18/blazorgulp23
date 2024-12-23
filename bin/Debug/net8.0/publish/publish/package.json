@@ -1,0 +1,20 @@
+{
+  "name": "blazorappwithgulp",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "scripts": {
+    "build": "gulp default",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Blazor WebAssembly project with Gulp for TypeScript to JavaScript compilation",
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-esbuild": "^0.14.0"
+  },
+  "dependencies": {
+    "esbuild-wasm": "^0.24.2"
+  }
+}

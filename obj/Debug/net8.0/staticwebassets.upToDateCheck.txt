@@ -1,0 +1,6 @@
+wwwroot\app.css
+wwwroot\bootstrap\bootstrap.min.css
+wwwroot\bootstrap\bootstrap.min.css.map
+wwwroot\favicon.png
+wwwroot\scripts\Canvas2d.js
+wwwroot\scripts\Canvas2d.js.map

@@ -1,0 +1,9 @@
+C:\Users\v-sirrasneha\source\repos\BlazorAppWithGulp\BlazorAppWithGulp\publish\BlazorAppWithGulp.exe
+C:\Users\v-sirrasneha\source\repos\BlazorAppWithGulp\BlazorAppWithGulp\publish\appsettings.Development.json
+C:\Users\v-sirrasneha\source\repos\BlazorAppWithGulp\BlazorAppWithGulp\publish\appsettings.json
+C:\Users\v-sirrasneha\source\repos\BlazorAppWithGulp\BlazorAppWithGulp\publish\package-lock.json
+C:\Users\v-sirrasneha\source\repos\BlazorAppWithGulp\BlazorAppWithGulp\publish\package.json
+C:\Users\v-sirrasneha\source\repos\BlazorAppWithGulp\BlazorAppWithGulp\publish\BlazorAppWithGulp.dll
+C:\Users\v-sirrasneha\source\repos\BlazorAppWithGulp\BlazorAppWithGulp\publish\BlazorAppWithGulp.deps.json
+C:\Users\v-sirrasneha\source\repos\BlazorAppWithGulp\BlazorAppWithGulp\publish\BlazorAppWithGulp.runtimeconfig.json
+C:\Users\v-sirrasneha\source\repos\BlazorAppWithGulp\BlazorAppWithGulp\publish\BlazorAppWithGulp.pdb
