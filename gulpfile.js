@@ -3,7 +3,7 @@ const esbuild = require("esbuild"); // Use the regular esbuild for Node.js
 
 const paths = {
     entries: ["./Components/Canvas2D/Canvas2d.ts"], // Adjust path as needed
-    output: "./wwwroot/scripts",
+    output: "./wwwroot", // Change to root directory for static files (including index.html)
 };
 
 gulp.task("default", async function () {
@@ -11,7 +11,7 @@ gulp.task("default", async function () {
     try {
         await esbuild.build({
             entryPoints: paths.entries, // Entry point for esbuild
-            outdir: paths.output, // Output directory
+            outdir: paths.output, // Output directory (directly into wwwroot)
             bundle: true,
             target: "es2015",
             format: "esm",
