@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "sources": ["Components/Canvas2D/Canvas2d.ts"],
-  "sourcesContent": ["export function greet() {\r\n    console.log(\"Hello from TypeScript!\");\r\n}\r\n"],
-  "mappings": "AAAO,SAASA,GAAQ,CACpB,QAAQ,IAAI,wBAAwB,CACxC",
+  "sources": ["../../Components/Canvas2D/Canvas2d.ts"],
+  "sourcesContent": ["\uFEFFexport function greet() {\r\n    console.log(\"Hello from TypeScript!\");\r\n}\r\n"],
+  "mappings": "AAAQ,SAASA,GAAQ,CACrB,QAAQ,IAAI,wBAAwB,CACxC",
   "names": ["greet"]
 }

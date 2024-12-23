@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BlazorAppWithGulp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b3ff1a2c1093867322b9ce87fa0a3d5e0a84f6c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8cdd4318930b11c67c876deff49c67a2e645322f")]
 [assembly: System.Reflection.AssemblyProductAttribute("BlazorAppWithGulp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BlazorAppWithGulp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
